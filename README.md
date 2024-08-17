@@ -13,9 +13,12 @@ With this app, bakers (from small business-bakeries or home bakers with the appr
 ## Technologies Used
 The current plan is to build this app from scratch, using Python and Flask. For customer and business data storage, I will use SQLite3 while developing the app, and once ready for deployment, switch to a database that can handle a mass amount of data more strongly, like PostgreSQL with Amazon RDS. 
 
+### Why Flask over Django? 
+Because this is my first web application, I chose to start with the web framework which came across as more intuitive based on the examples and documentation available. This happened to be Flask. 
+
 ## Potential issues with building the app
 This is my first web application that I am building completely from scratch. I am essentially learning as I build, especially HTML. This project will likely take a while to develop. 
 
-Alongside the amount of time it will take, I am concerned about how much I will be able to create using Python/Flask alone, as JavaScript/React/C# are more commonly used for big projects like this
+Alongside the amount of time it will take, I am concerned about how much I will be able to create using Python/Flask alone, as JavaScript/React/C# are more commonly used for big projects like this. In addition, depending on how large this project gets, I may have to switch from Flask to Django. 
 
 Stay tuned for updates! 
