@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script>
+        function toggleBusinessFields() {
+            var userType = document.getElementById('user_type').value;
+            var businessFields = document.getElementById('business_fields');
+            if (userType === 'business') {
+                businessFields.style.display = 'block';
+            } else {
+                businessFields.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <form action="{{ url_for('signup') }}" method="post">
+        <label for="user_type">Sign up as:</label>
+        <select id="user_type" name="user_type" onchange="toggleBusinessFields()" required>
+            <option value="customer">Customer</option>
+            <option value="business">Business</option>
+        </select>
+        <br>
+
+        <div id="business_fields" style="display:none;">
+            <label for="business_name">Business Name:</label>
+            <input type="text" id="business_name" name="business_name">
+            <br>
+            <label for="zip_code">Business ZIP Code:</label>
+            <input type="text" id="zip_code" name="zip_code">
+            <br>
+        </div>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+
+        <label for="confirm_password">Re-enter Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+        <br>
+
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>

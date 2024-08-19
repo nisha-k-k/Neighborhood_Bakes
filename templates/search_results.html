@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    {% if results %}
+        <ul>
+            {% for result in results %}
+                <li>
+                    <strong>{{ result.name }}</strong><br>
+                    Address: {{ result.address }}, {{ result.city }}<br>
+                    ZIP Code: {{ result.zip_code }}<br>
+                    Distance: {{ result.distance }} miles
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No Businesses Found</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
