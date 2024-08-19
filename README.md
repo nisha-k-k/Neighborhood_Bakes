@@ -1,5 +1,8 @@
 # App-Building in Progress! 
 
+### Update 8/18/24
+Uploaded initial files to repository, including: Basic HTML templates, initial app code for the corresponding HTML templates, and database (SQLite during development)
+
 # Neighborhood Bakes
 A web app to find local/home bakers!
 
